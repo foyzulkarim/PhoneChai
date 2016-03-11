@@ -3,16 +3,66 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{AEECFEA5-AE77-40EE-952C-00991B2704B8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 App", "01 App", "{AEECFEA5-AE77-40EE-952C-00991B2704B8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{E2781515-CDB3-4FA7-88EA-6A0F9C7A6F30}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Service", "02 Service", "{E2781515-CDB3-4FA7-88EA-6A0F9C7A6F30}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{A54F2DBE-0B0F-4F66-9F4E-47D38D598E48}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Repository", "03 Repository", "{A54F2DBE-0B0F-4F66-9F4E-47D38D598E48}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{A25F5788-D521-42DC-BF10-3276C6E683A1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Model", "04 Model", "{A25F5788-D521-42DC-BF10-3276C6E683A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonechai.Model", "Phonechai.Model\Phonechai.Model.csproj", "{4DABAE78-AFC7-4236-85A4-1221F81687ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonechai.RequestModel", "Phonechai.RequestModel\Phonechai.RequestModel.csproj", "{D691B5EC-9C77-4C4F-9FB8-9351425FDAB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonechai.ViewModel", "Phonechai.ViewModel\Phonechai.ViewModel.csproj", "{5B8BD653-4423-498D-B35F-1E8CB9EF28D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonechai.Repository", "Phonechai.Repository\Phonechai.Repository.csproj", "{534BC09F-B0BF-42EC-916B-3F0F0D9F8498}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonechai.Service", "Phonechai.Service\Phonechai.Service.csproj", "{EC5C6CC9-1C33-48F7-B49A-B1647B8FB536}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonechai.WebApp", "Phonechai.WebApp\Phonechai.WebApp.csproj", "{96E92C25-47A2-4785-AF47-F5CECA6C4772}"
 EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DABAE78-AFC7-4236-85A4-1221F81687ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DABAE78-AFC7-4236-85A4-1221F81687ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DABAE78-AFC7-4236-85A4-1221F81687ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DABAE78-AFC7-4236-85A4-1221F81687ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D691B5EC-9C77-4C4F-9FB8-9351425FDAB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D691B5EC-9C77-4C4F-9FB8-9351425FDAB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D691B5EC-9C77-4C4F-9FB8-9351425FDAB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D691B5EC-9C77-4C4F-9FB8-9351425FDAB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B8BD653-4423-498D-B35F-1E8CB9EF28D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B8BD653-4423-498D-B35F-1E8CB9EF28D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B8BD653-4423-498D-B35F-1E8CB9EF28D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B8BD653-4423-498D-B35F-1E8CB9EF28D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{534BC09F-B0BF-42EC-916B-3F0F0D9F8498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{534BC09F-B0BF-42EC-916B-3F0F0D9F8498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{534BC09F-B0BF-42EC-916B-3F0F0D9F8498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{534BC09F-B0BF-42EC-916B-3F0F0D9F8498}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC5C6CC9-1C33-48F7-B49A-B1647B8FB536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5C6CC9-1C33-48F7-B49A-B1647B8FB536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC5C6CC9-1C33-48F7-B49A-B1647B8FB536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5C6CC9-1C33-48F7-B49A-B1647B8FB536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96E92C25-47A2-4785-AF47-F5CECA6C4772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96E92C25-47A2-4785-AF47-F5CECA6C4772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96E92C25-47A2-4785-AF47-F5CECA6C4772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96E92C25-47A2-4785-AF47-F5CECA6C4772}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4DABAE78-AFC7-4236-85A4-1221F81687ED} = {A25F5788-D521-42DC-BF10-3276C6E683A1}
+		{D691B5EC-9C77-4C4F-9FB8-9351425FDAB3} = {A25F5788-D521-42DC-BF10-3276C6E683A1}
+		{5B8BD653-4423-498D-B35F-1E8CB9EF28D2} = {A25F5788-D521-42DC-BF10-3276C6E683A1}
+		{534BC09F-B0BF-42EC-916B-3F0F0D9F8498} = {A54F2DBE-0B0F-4F66-9F4E-47D38D598E48}
+		{EC5C6CC9-1C33-48F7-B49A-B1647B8FB536} = {E2781515-CDB3-4FA7-88EA-6A0F9C7A6F30}
+		{96E92C25-47A2-4785-AF47-F5CECA6C4772} = {AEECFEA5-AE77-40EE-952C-00991B2704B8}
 	EndGlobalSection
 EndGlobal
