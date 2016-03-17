@@ -211,6 +211,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PhoneController.cs" />
+    <Compile Include="Controllers\PhoneQueryController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -234,6 +235,7 @@
     <Content Include="partials\home\home.tpl.html" />
     <Content Include="partials\account\signin.tpl.html" />
     <Content Include="partials\phone\phone-entry.tpl.html" />
+    <Content Include="partials\phone\phone-list.tpl.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -352,6 +354,7 @@
     <TypeScriptCompile Include="App\App.Config.ts" />
     <TypeScriptCompile Include="App\Home\HomeController.ts" />
     <TypeScriptCompile Include="App\Models\Models.ts" />
+    <TypeScriptCompile Include="App\Phone\PhoneQueryController.ts" />
     <TypeScriptCompile Include="App\Phone\PhoneController.ts" />
     <TypeScriptCompile Include="App\Phone\PhoneService.ts" />
     <TypeScriptCompile Include="Scripts\typings\angular-ui-router\angular-ui-router.d.ts" />

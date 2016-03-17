@@ -13,6 +13,7 @@ namespace Phonechai.ViewModel
         {
             Id = phone.Id;
             Name = phone.Name;
+            Price = phone.Price;
         }
 
         public string Id { get; set; }

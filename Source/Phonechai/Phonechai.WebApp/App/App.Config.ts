@@ -19,19 +19,23 @@
                     url: "/",
                     templateUrl: "partials/home/home.tpl.html",
                     controller: "HomeController",
-                    controllerAs:"vm"
+                    controllerAs: "vm"
                 })
                 .state("root.signin", {
                     url: "/signin",
                     templateUrl: "partials/account/signin.tpl.html"
                 })
-                .state("root.phoneentry", {
+                .state("root.phone-entry", {
                     url: "/phone-entry",
                     templateUrl: "partials/phone/phone-entry.tpl.html",
                     controller: "PhoneController",
-                    controllerAs:"vm"
-                })
-                ;
+                    controllerAs: "vm"
+                }).state("root.phone-list", {
+                    url: "/phone-list",
+                    templateUrl: "partials/phone/phone-list.tpl.html",
+                    controller: "PhoneQueryController",
+                    controllerAs: "vm"
+                });
         }
     }
 

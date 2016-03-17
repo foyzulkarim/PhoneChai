@@ -30,6 +30,24 @@ module App {
                 .then(successCallback, errorCallback);
             return deffered.promise;
         }
+
+        Get() {
+            var self = this;
+            var deffered = this.qService.defer();
+
+            var successCallback = result => {
+                console.log(result);
+                return deffered.resolve(result);
+            };
+            var errorCallback = error => {
+                console.log(error);
+                return deffered.reject(error);
+            };
+
+            self.httpService.get("/api/phonequery")
+                .then(successCallback, errorCallback);
+            return deffered.promise;
+        }
     }
 
     angular.module("app").service("PhoneService", PhoneService);
