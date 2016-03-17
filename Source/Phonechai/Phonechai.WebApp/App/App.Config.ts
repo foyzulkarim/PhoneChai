@@ -17,16 +17,16 @@
                 })
                 .state("root.home", {
                     url: "/",
-                    views: {
-                        "":
-                        {
-                            template: "<h1>Hello.</h1>"
-                        }
-                    }
+                    templateUrl: "partials/home/home.tpl.html",
+                    controller: "HomeController",
+                    controllerAs:"vm"
+                }).state("root.signin", {
+                    url: "/signin",
+                    templateUrl: "partials/account/signin.tpl.html"
                 });
         }
     }
-  
-    angular.module("app", ["ngResource", "ui.router"]);
+
+    angular.module("app", ["ui.router", "ngResource"]);
     angular.module("app").config(AppConfig);
 }
