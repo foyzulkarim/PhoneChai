@@ -20,10 +20,18 @@
                     templateUrl: "partials/home/home.tpl.html",
                     controller: "HomeController",
                     controllerAs:"vm"
-                }).state("root.signin", {
+                })
+                .state("root.signin", {
                     url: "/signin",
                     templateUrl: "partials/account/signin.tpl.html"
-                });
+                })
+                .state("root.phoneentry", {
+                    url: "/phone-entry",
+                    templateUrl: "partials/phone/phone-entry.tpl.html",
+                    controller: "PhoneController",
+                    controllerAs:"vm"
+                })
+                ;
         }
     }
 
