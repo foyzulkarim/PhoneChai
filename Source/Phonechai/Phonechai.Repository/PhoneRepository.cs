@@ -8,16 +8,6 @@ using Phonechai.ViewModel;
 
 namespace Phonechai.Repository
 {
-    public abstract class BaseRepository
-    {
-        public BusinessDbContext Db { get; set; }
-
-        protected BaseRepository(BusinessDbContext db)
-        {
-            this.Db = db;
-        }
-    }
-
     public class PhoneRepository: BaseRepository
     {
         public PhoneRepository(BusinessDbContext db) : base(db)
@@ -27,6 +17,13 @@ namespace Phonechai.Repository
         public IQueryable<Phone> GetAll()
         {
             return Db.Phones.AsQueryable();
+        }
+
+        public string Add(Phone phone)
+        {
+            Phone added = Db.Phones.Add(phone);
+            Db.SaveChanges();
+            return added.Id;
         }
     }
 }
