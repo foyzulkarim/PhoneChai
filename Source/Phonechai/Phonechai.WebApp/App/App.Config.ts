@@ -30,7 +30,14 @@
                     templateUrl: "partials/phone/phone-entry.tpl.html",
                     controller: "PhoneController",
                     controllerAs: "vm"
-                }).state("root.phone-list", {
+                })
+                .state("root.phone-edit", {
+                    url: "/phone-edit/:id",
+                    templateUrl: "partials/phone/phone-entry.tpl.html",
+                    controller: "PhoneController",
+                    controllerAs: "vm"
+                })
+                .state("root.phone-list", {
                     url: "/phone-list",
                     templateUrl: "partials/phone/phone-list.tpl.html",
                     controller: "PhoneQueryController",

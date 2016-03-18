@@ -28,7 +28,17 @@ namespace Phonechai.Service
 
         public string Add(Phone phone)
         {
+            bool exists = repository.Exists(phone.Id);
+            if (exists)
+            {
+                return repository.Update(phone);
+            }
             return repository.Add(phone);
+        }
+
+        public PhoneViewModel GetDetail(string id)
+        {
+            return repository.GetDetail(id);
         }
     }
 }

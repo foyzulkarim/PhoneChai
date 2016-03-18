@@ -2,11 +2,27 @@
     export class PhoneController {
 
         Phone: Phone;
-        private phoneService : PhoneService;
-        static $inject = ["PhoneService"];
-        constructor(phoneService: PhoneService) {
+        private phoneService: PhoneService;
+        private stateParamService: angular.ui.IStateParamsService;
+
+        static $inject = ["PhoneService","$stateParams"];
+        constructor(phoneService: PhoneService, stateParams: angular.ui.IStateParamsService) {
             this.Phone = new Phone();
             this.phoneService = phoneService;
+            this.stateParamService = stateParams;
+
+            if (this.stateParamService["id"]!=null) {
+                // call to the server here.
+                console.log("call to server");
+                var id = this.stateParamService["id"];
+                this.phoneService.GetDetail(id)
+                    .then((success: any) : void => {
+                        console.log(success);
+                        this.Phone = success.data;
+                    }, error => {
+                        console.log(error);
+                    });
+            }
         }
 
         Save() {

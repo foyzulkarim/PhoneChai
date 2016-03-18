@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,25 @@ namespace Phonechai.Repository
             Phone added = Db.Phones.Add(phone);
             Db.SaveChanges();
             return added.Id;
+        }
+
+        public bool Exists(string id)
+        {
+            return Db.Phones.Any(x => x.Id == id);
+        }
+
+        public PhoneViewModel GetDetail(string id)
+        {
+            Phone phone = Db.Phones.Find(id);
+            PhoneViewModel viewModel = new PhoneViewModel(phone);
+            return viewModel;
+        }
+
+        public string Update(Phone phone)
+        {
+            Db.Entry(phone).State = EntityState.Modified;
+            Db.SaveChanges();
+            return phone.Id;
         }
     }
 }
