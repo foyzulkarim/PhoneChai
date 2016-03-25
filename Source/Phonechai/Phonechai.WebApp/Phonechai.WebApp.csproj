@@ -212,6 +212,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PhoneController.cs" />
     <Compile Include="Controllers\PhoneQueryController.cs" />
+    <Compile Include="Controllers\PrivateResourcesController.cs" />
+    <Compile Include="Controllers\PublicResourcesController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
