@@ -1,1 +1,6 @@
 ﻿<h2>hello world. i m in login page</h2>
+<form name="form" id="form" ng-submit="vm.Signin()">
+    <input type="text" name="username" ng-model="vm.User.Username"/><br/>
+    <input type="password" name="password" ng-model="vm.User.Password"/>
+    <input type="submit" value="Signin"/>
+</form>

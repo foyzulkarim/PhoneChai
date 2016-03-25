@@ -9,6 +9,7 @@ using Phonechai.ViewModel;
 
 namespace Phonechai.WebApp.Controllers
 {
+    [Authorize]
     public class PhoneQueryController : BaseController
     {
         PhoneService service;

@@ -6,11 +6,13 @@ module App {
 
         private httpService: angular.IHttpService;
         private qService: angular.IQService;
+        private authService: AuthService;
 
-        static $inject: string[] = ["$http","$q"];
-        constructor(private $http: ng.IHttpService, private $q: ng.IQService) {
+        static $inject: string[] = ["$http","$q","AuthService"];
+        constructor(private $http: ng.IHttpService, private $q: ng.IQService,auth:AuthService) {
             this.httpService = $http;
             this.qService = $q;
+            this.authService = auth;
         }
 
         Save(data : Phone) : angular.IPromise<any> {
@@ -43,8 +45,8 @@ module App {
                 console.log(error);
                 return deffered.reject(error);
             };
-
-            self.httpService.get("/api/phonequery")
+            var config: angular.IRequestShortcutConfig = { headers: { 'Authorization': "Bearer "+self.authService.AccountInfo.AccessToken } };
+            self.httpService.get("/api/phonequery",config)
                 .then(successCallback, errorCallback);
             return deffered.promise;
         }

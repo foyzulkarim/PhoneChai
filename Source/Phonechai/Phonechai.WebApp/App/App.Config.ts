@@ -23,7 +23,9 @@
                 })
                 .state("root.signin", {
                     url: "/signin",
-                    templateUrl: "partials/account/signin.tpl.html"
+                    templateUrl: "partials/account/signin.tpl.html",
+                    controller: "SigninController",
+                    controllerAs:"vm"
                 })
                 .state("root.phone-entry", {
                     url: "/phone-entry",
@@ -46,6 +48,6 @@
         }
     }
 
-    angular.module("app", ["ui.router", "ngResource"]);
+    angular.module("app", ["ui.router", "ngResource","LocalStorageModule"]);
     angular.module("app").config(AppConfig);
 }
