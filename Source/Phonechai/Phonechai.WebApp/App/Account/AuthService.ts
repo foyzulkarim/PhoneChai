@@ -3,8 +3,14 @@ module App {
     "use strict";
 
     export class AccountInfo {
+        constructor() {
+            this.Username = "";
+            this.AccessToken = "";
+            this.IsAuthenticated = false;
+        }
         Username: string;
         AccessToken: string;
+        IsAuthenticated: boolean;
     }
     
     export class AuthService  {
@@ -16,13 +22,24 @@ module App {
             this.localStorageService = localStorageService;
         }
 
-        SetInfo(acc: AccountInfo): void {
+        SetInfo(): void {
             var self = this;
-            self.localStorageService.set("AccountInfo", acc);
+            self.localStorageService.set("AccountInfo", self.AccountInfo);
         }
 
+
+        FillAuthData(): void {
+            var self = this;
+            self.AccountInfo = <any>self.localStorageService.get("AccountInfo");
+        }
+
+        IsAuthenticated(): boolean {
+            return this.AccountInfo && this.AccountInfo.IsAuthenticated;
+        }
 
     }
 
     angular.module("app").service("AuthService", AuthService);
+
+  
 }

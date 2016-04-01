@@ -50,4 +50,6 @@
 
     angular.module("app", ["ui.router", "ngResource","LocalStorageModule"]);
     angular.module("app").config(AppConfig);
+
+   
 }

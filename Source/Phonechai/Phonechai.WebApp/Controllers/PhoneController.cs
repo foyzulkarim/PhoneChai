@@ -9,6 +9,7 @@ using Phonechai.Service;
 
 namespace Phonechai.WebApp.Controllers
 {
+    [Authorize(Roles = "SuperAdmin,Owner")]
     public class PhoneController : BaseController
     {
         public IHttpActionResult Post(Phone phone)
@@ -22,6 +23,8 @@ namespace Phonechai.WebApp.Controllers
             string addedId =  service.Add(phone);
             return Ok(addedId);
         }
+
+       
 
     }
 }

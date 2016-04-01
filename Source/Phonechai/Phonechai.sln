@@ -6,6 +6,11 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 App", "01 App", "{AEECFEA5-AE77-40EE-952C-00991B2704B8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Service", "02 Service", "{E2781515-CDB3-4FA7-88EA-6A0F9C7A6F30}"
+	ProjectSection(SolutionItems) = preProject
+		Phonechai.WebApp\Web.config = Phonechai.WebApp\Web.config
+		Phonechai.WebApp\Web.Debug.config = Phonechai.WebApp\Web.Debug.config
+		Phonechai.WebApp\Web.Release.config = Phonechai.WebApp\Web.Release.config
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Repository", "03 Repository", "{A54F2DBE-0B0F-4F66-9F4E-47D38D598E48}"
 EndProject

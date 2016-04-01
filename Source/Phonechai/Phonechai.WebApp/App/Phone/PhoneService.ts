@@ -45,8 +45,8 @@ module App {
                 console.log(error);
                 return deffered.reject(error);
             };
-            var config: angular.IRequestShortcutConfig = { headers: { 'Authorization': "Bearer "+self.authService.AccountInfo.AccessToken } };
-            self.httpService.get("/api/phonequery",config)
+            //var config: angular.IRequestShortcutConfig = { headers: { 'Authorization': "Bearer "+self.authService.AccountInfo.AccessToken } };
+            self.httpService.get("/api/phonequery")
                 .then(successCallback, errorCallback);
             return deffered.promise;
         }
