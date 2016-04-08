@@ -1,14 +1,20 @@
 using Phonechai.Model;
+using Phonechai.Repository;
 
 namespace Phonechai.Service
 {
-    public class BaseService
+    public class BaseService<T> where T : Entity
     {
-        protected BusinessDbContext DbContext;
+        private BaseRepository<T> repository;         
 
-        public BaseService(BusinessDbContext db)
+        protected BaseService(BaseRepository<T> repository)
         {
-            DbContext = db;
+            this.repository = repository;
+        }
+
+        public bool Add(T entity)
+        {             
+            return repository.Add(entity);
         }
     }
 }

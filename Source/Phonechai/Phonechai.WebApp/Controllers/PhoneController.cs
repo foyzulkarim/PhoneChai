@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Phonechai.Model;
+using Phonechai.Repository;
 using Phonechai.Service;
 
 namespace Phonechai.WebApp.Controllers
@@ -14,14 +15,14 @@ namespace Phonechai.WebApp.Controllers
     {
         public IHttpActionResult Post(Phone phone)
         {
-            PhoneService service = new PhoneService(Db);
+            var service = new PhoneService(new PhoneRepository(new BusinessDbContext()));
             if (string.IsNullOrWhiteSpace(phone.Id))
             {
                 phone.Id = Guid.NewGuid().ToString();
             }
             // this is a test
-            string addedId =  service.Add(phone);
-            return Ok(addedId);
+            var addedId =  service.Add(phone);
+            return Ok(phone.Id);
         }
 
        

@@ -1,8 +1,11 @@
+using System.Data.Entity;
+using System.IO;
+using System.Linq;
 using Phonechai.Model;
 
 namespace Phonechai.Repository
 {
-    public abstract class BaseRepository
+    public abstract class BaseRepository<T> where T : Entity 
     {
         public BusinessDbContext Db { get; set; }
 
@@ -10,5 +13,14 @@ namespace Phonechai.Repository
         {
             this.Db = db;
         }
+
+        public bool Add(T entity)
+        {
+            DbSet<T> dbSet = Db.Set<T>();
+            T add = dbSet.Add(entity);
+            Db.SaveChanges();
+            return true;
+        }
     }
+
 }

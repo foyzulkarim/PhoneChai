@@ -9,7 +9,7 @@ using Phonechai.ViewModel;
 
 namespace Phonechai.Repository
 {
-    public class PhoneRepository: BaseRepository
+    public class PhoneRepository: BaseRepository<Phone>
     {
         public PhoneRepository(BusinessDbContext db) : base(db)
         {
@@ -18,14 +18,7 @@ namespace Phonechai.Repository
         public IQueryable<Phone> GetAll()
         {
             return Db.Phones.AsQueryable();
-        }
-
-        public string Add(Phone phone)
-        {
-            Phone added = Db.Phones.Add(phone);
-            Db.SaveChanges();
-            return added.Id;
-        }
+        }      
 
         public bool Exists(string id)
         {

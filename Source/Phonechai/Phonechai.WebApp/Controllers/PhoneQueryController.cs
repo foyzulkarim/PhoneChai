@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Phonechai.Repository;
 using Phonechai.Service;
 using Phonechai.ViewModel;
 
@@ -16,7 +17,7 @@ namespace Phonechai.WebApp.Controllers
 
         public PhoneQueryController()
         {
-            service = new PhoneService(Db);
+            service = new PhoneService(new PhoneRepository(Db));
         }
 
         public IHttpActionResult Get()

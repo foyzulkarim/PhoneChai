@@ -299,6 +299,10 @@
       <Project>{4DABAE78-AFC7-4236-85A4-1221F81687ED}</Project>
       <Name>Phonechai.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Phonechai.Repository\Phonechai.Repository.csproj">
+      <Project>{534BC09F-B0BF-42EC-916B-3F0F0D9F8498}</Project>
+      <Name>Phonechai.Repository</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Phonechai.Service\Phonechai.Service.csproj">
       <Project>{EC5C6CC9-1C33-48F7-B49A-B1647B8FB536}</Project>
       <Name>Phonechai.Service</Name>
