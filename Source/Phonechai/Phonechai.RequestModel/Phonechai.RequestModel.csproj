@@ -41,6 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestHelperModels.cs" />
+    <Compile Include="RequestModels.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Phonechai.Model\Phonechai.Model.csproj">
+      <Project>{4DABAE78-AFC7-4236-85A4-1221F81687ED}</Project>
+      <Name>Phonechai.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

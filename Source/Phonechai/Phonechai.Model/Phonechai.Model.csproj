@@ -49,11 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Brand.cs" />
     <Compile Include="BusinessDbContext.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="Migrations\201603110940143_PhoneV1.cs" />
     <Compile Include="Migrations\201603110940143_PhoneV1.Designer.cs">
       <DependentUpon>201603110940143_PhoneV1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604080630080_BrandAdded.cs" />
+    <Compile Include="Migrations\201604080630080_BrandAdded.Designer.cs">
+      <DependentUpon>201604080630080_BrandAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Phone.cs" />
@@ -66,6 +71,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201603110940143_PhoneV1.resx">
       <DependentUpon>201603110940143_PhoneV1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604080630080_BrandAdded.resx">
+      <DependentUpon>201604080630080_BrandAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

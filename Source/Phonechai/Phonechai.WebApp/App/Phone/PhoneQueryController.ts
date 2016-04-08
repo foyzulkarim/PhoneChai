@@ -2,12 +2,14 @@
     export class PhoneQueryController {
 
         Phones: Phone[];
+        SearchRequest: SearchRequest;
 
         private phoneService: PhoneService;
         static $inject = ["PhoneService"];
         constructor(phoneService: PhoneService) {
             this.phoneService = phoneService;
             this.Phones = [];
+            this.SearchRequest = new SearchRequest("", "Name", "False", "");
             this.Get();
         }
 
@@ -21,7 +23,7 @@
                 console.log(error);
             };
 
-            self.phoneService.Get()
+            self.phoneService.Search(self.SearchRequest)
                 .then(successCallback, errorCallback);
         }
     }

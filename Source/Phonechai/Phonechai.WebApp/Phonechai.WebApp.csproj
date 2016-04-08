@@ -181,6 +181,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\Command\BrandCommandController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MyPhoneQueryController.cs" />
     <Compile Include="Controllers\PhoneController.cs" />
@@ -303,6 +304,10 @@
       <Project>{534BC09F-B0BF-42EC-916B-3F0F0D9F8498}</Project>
       <Name>Phonechai.Repository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Phonechai.RequestModel\Phonechai.RequestModel.csproj">
+      <Project>{D691B5EC-9C77-4C4F-9FB8-9351425FDAB3}</Project>
+      <Name>Phonechai.RequestModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Phonechai.Service\Phonechai.Service.csproj">
       <Project>{EC5C6CC9-1C33-48F7-B49A-B1647B8FB536}</Project>
       <Name>Phonechai.Service</Name>
@@ -316,6 +321,7 @@
     <TypeScriptCompile Include="App\Account\AuthService.ts" />
     <TypeScriptCompile Include="App\Account\SigninController.ts" />
     <TypeScriptCompile Include="App\App.Config.ts" />
+    <TypeScriptCompile Include="App\Core\RequestModels.ts" />
     <TypeScriptCompile Include="App\Home\HomeController.ts" />
     <TypeScriptCompile Include="App\Models\Models.ts" />
     <TypeScriptCompile Include="App\Phone\PhoneQueryController.ts" />

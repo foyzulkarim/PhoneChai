@@ -14,5 +14,6 @@ namespace Phonechai.Model
             
         }
         public DbSet<Phone> Phones { get; set; }
+        public DbSet<Brand> Brands { get; set; }
     }
 }

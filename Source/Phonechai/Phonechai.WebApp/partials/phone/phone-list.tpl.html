@@ -1,4 +1,6 @@
-﻿<table>
+﻿<input type="text" ng-model="vm.SearchRequest.Keyword" />
+<button ng-click="vm.Get()">Search</button>
+<table>
     <tr>
         <th>
             Name
@@ -10,7 +12,7 @@
             Edit
         </th>
     </tr>
-    <tr ng-repeat="p in vm.Phones">
+    <tr ng-repeat="p in vm.Phones track by $index">
         <td>
             {{p.Name}}
         </td>

@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseService.cs" />
+    <Compile Include="BrandService.cs" />
     <Compile Include="PhoneService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -61,6 +62,10 @@
     <ProjectReference Include="..\Phonechai.Repository\Phonechai.Repository.csproj">
       <Project>{534BC09F-B0BF-42EC-916B-3F0F0D9F8498}</Project>
       <Name>Phonechai.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Phonechai.RequestModel\Phonechai.RequestModel.csproj">
+      <Project>{D691B5EC-9C77-4C4F-9FB8-9351425FDAB3}</Project>
+      <Name>Phonechai.RequestModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\Phonechai.ViewModel\Phonechai.ViewModel.csproj">
       <Project>{5B8BD653-4423-498D-B35F-1E8CB9EF28D2}</Project>
