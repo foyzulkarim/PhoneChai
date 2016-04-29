@@ -13,7 +13,7 @@
 
             if (this.stateParamService["id"]!=null) {
                 // call to the server here.
-                console.log("call to server");
+               
                 var id = this.stateParamService["id"];
                 this.phoneService.GetDetail(id)
                     .then((success: any) : void => {

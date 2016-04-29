@@ -202,6 +202,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App.Publish\Phone.Lib-1.0.0.js" />
+    <Content Include="App.Publish\Phone.Lib-1.0.0.min.js">
+      <DependentUpon>Phone.Lib-1.0.0.js</DependentUpon>
+    </Content>
     <Content Include="App\Account\Interceptor.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -257,6 +261,7 @@
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular-local-storage.min.js.map" />
+    <None Include="bundleconfig.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

@@ -1,0 +1,10 @@
+[
+  {
+    "outputFileName": "App.Publish/Phone.Lib-1.0.0.js",
+    "inputFiles": [
+      "App/Phone/PhoneController.js",
+      "App/Phone/PhoneQueryController.js",
+      "App/Phone/PhoneService.js"
+    ]
+  }
+]
